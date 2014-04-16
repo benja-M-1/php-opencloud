@@ -74,8 +74,8 @@ abstract class AbstractResource extends PersistentObject
      * Test the validity of certain parameters for the resource.
      *
      * @access public
-     * @param array $params (default: array())
-     * @param bool  $debug  (default: false)
+     * @param  array $params (default: array())
+     * @param  bool  $debug  (default: false)
      * @return void
      */
     public function testParams($params = array(), $debug = false)
@@ -95,7 +95,7 @@ abstract class AbstractResource extends PersistentObject
      * Test the validity of an existing resource.
      *
      * @access public
-     * @param bool $debug (default: false)
+     * @param  bool $debug (default: false)
      * @return void
      */
     public function test($debug = false)

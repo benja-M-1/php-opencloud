@@ -44,7 +44,7 @@ class Schema extends AbstractSchemaItem
     protected $links;
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return Schema
      */
     public static function factory(array $data)
@@ -164,7 +164,7 @@ class Schema extends AbstractSchemaItem
     /**
      * Based on this schema, decide the most appropriate operation type for a given property
      *
-     * @param Property $property The property being performed on
+     * @param  Property $property The property being performed on
      * @return string
      */
     public function decideOperationType(Property $property)

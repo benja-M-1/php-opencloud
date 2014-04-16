@@ -52,9 +52,9 @@ class ContainerMigration
     );
 
     /**
-     * @param Container $old     Source container
-     * @param Container $new     Target container
-     * @param array     $options Options that configure process
+     * @param  Container          $old     Source container
+     * @param  Container          $new     Target container
+     * @param  array              $options Options that configure process
      * @return ContainerMigration
      */
     public static function factory(Container $old, Container $new, array $options = array())
@@ -179,7 +179,7 @@ class ContainerMigration
     /**
      * Create a tailored PUT request for each file
      *
-     * @param Response $response
+     * @param  Response                                             $response
      * @return \Guzzle\Http\Message\EntityEnclosingRequestInterface
      */
     protected function createPutRequest(Response $response)

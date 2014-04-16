@@ -59,7 +59,7 @@ class Service extends CatalogService
     /**
      * Get an agent.
      *
-     * @param string|null $id
+     * @param  string|null                               $id
      * @return \OpenCloud\CloudMonitoring\Resource\Agent
      */
     public function getAgent($id = null)
@@ -110,7 +110,7 @@ class Service extends CatalogService
     /**
      * Get either an empty object, or a populated one that exists on the API.
      *
-     * @param null $id
+     * @param  null                                       $id
      * @return \OpenCloud\CloudMonitoring\Resource\Entity
      */
     public function getEntity($id = null)
@@ -131,7 +131,7 @@ class Service extends CatalogService
     /**
      * Get a particular check type.
      *
-     * @param null $id
+     * @param  null                                          $id
      * @return \OpenCloud\CloudMonitoring\Resource\CheckType
      */
     public function getCheckType($id = null)
@@ -153,7 +153,7 @@ class Service extends CatalogService
     /**
      * Test the parameters of a notification before creating it.
      *
-     * @param array $params
+     * @param  array $params
      * @return mixed
      */
     public function testNotification(array $params)
@@ -164,7 +164,7 @@ class Service extends CatalogService
     /**
      * Get a particular notification.
      *
-     * @param null $id
+     * @param  null                                             $id
      * @return \OpenCloud\CloudMonitoring\Resource\Notification
      */
     public function getNotification($id = null)
@@ -185,7 +185,7 @@ class Service extends CatalogService
     /**
      * Create a new notification plan.
      *
-     * @param array $params
+     * @param  array $params
      * @return mixed
      */
     public function createNotificationPlan(array $params)
@@ -196,7 +196,7 @@ class Service extends CatalogService
     /**
      * Get a particular notification plan.
      *
-     * @param null $id
+     * @param  null                                                 $id
      * @return \OpenCloud\CloudMonitoring\Resource\NotificationPlan
      */
     public function getNotificationPlan($id = null)
@@ -217,7 +217,7 @@ class Service extends CatalogService
     /**
      * Get a particular notification type.
      *
-     * @param null $id
+     * @param  null                                                 $id
      * @return \OpenCloud\CloudMonitoring\Resource\NotificationType
      */
     public function getNotificationType($id = null)
@@ -248,7 +248,7 @@ class Service extends CatalogService
     /**
      * Get a particular monitoring zone.
      *
-     * @param null $id
+     * @param  null                                     $id
      * @return \OpenCloud\CloudMonitoring\Resource\Zone
      */
     public function getMonitoringZone($id = null)
@@ -259,7 +259,7 @@ class Service extends CatalogService
     /**
      * Get a changelog - either a general one or one catered for a particular entity.
      *
-     * @param string|null $data
+     * @param  string|null  $data
      * @return object|false
      */
     public function getChangelog($data = null)

@@ -72,9 +72,9 @@ class PaginatedIterator extends ResourceIterator implements Iterator
     /**
      * Basic factory method to easily instantiate a new ResourceIterator.
      *
-     * @param       $parent  The parent object
-     * @param array $options Iterator options
-     * @param array $data    Optional data to set initially
+     * @param         $parent  The parent object
+     * @param  array  $options Iterator options
+     * @param  array  $data    Optional data to set initially
      * @return static
      */
     public static function factory($parent, array $options = array(), array $data = null)
@@ -94,9 +94,8 @@ class PaginatedIterator extends ResourceIterator implements Iterator
         return $list;
     }
 
-
     /**
-     * @param Url $url
+     * @param  Url   $url
      * @return $this
      */
     public function setBaseUrl(Url $url)
@@ -187,7 +186,7 @@ class PaginatedIterator extends ResourceIterator implements Iterator
     /**
      * Append an array of standard objects to the current collection.
      *
-     * @param array $elements
+     * @param  array $elements
      * @return $this
      */
     public function appendElements(array $elements)

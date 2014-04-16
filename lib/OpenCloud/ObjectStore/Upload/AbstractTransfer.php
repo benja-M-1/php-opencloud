@@ -89,7 +89,7 @@ class AbstractTransfer
     }
 
     /**
-     * @param Client $client
+     * @param  Client $client
      * @return $this
      */
     public function setClient(Client $client)
@@ -100,7 +100,7 @@ class AbstractTransfer
     }
 
     /**
-     * @param EntityBody $entityBody
+     * @param  EntityBody $entityBody
      * @return $this
      */
     public function setEntityBody(EntityBody $entityBody)
@@ -111,7 +111,7 @@ class AbstractTransfer
     }
 
     /**
-     * @param TransferState $transferState
+     * @param  TransferState $transferState
      * @return $this
      */
     public function setTransferState(TransferState $transferState)
@@ -184,8 +184,8 @@ class AbstractTransfer
      * Initiates the upload procedure.
      *
      * @return \Guzzle\Http\Message\Response
-     * @throws RuntimeException If the transfer is not in a "running" state
-     * @throws UploadException  If any errors occur during the upload
+     * @throws RuntimeException              If the transfer is not in a "running" state
+     * @throws UploadException               If any errors occur during the upload
      * @codeCoverageIgnore
      */
     public function upload()

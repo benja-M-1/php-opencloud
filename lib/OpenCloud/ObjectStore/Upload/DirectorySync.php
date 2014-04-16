@@ -47,8 +47,8 @@ class DirectorySync
     /**
      * Basic factory method to instantiate a new DirectorySync object with all the appropriate properties.
      *
-     * @param           $path      The local path
-     * @param Container $container The container you're syncing
+     * @param                $path      The local path
+     * @param  Container     $container The container you're syncing
      * @return DirectorySync
      */
     public static function factory($path, Container $container)

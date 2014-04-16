@@ -68,8 +68,8 @@ class Container extends AbstractContainer
     /**
      * Factory method that instantiates an object from a Response object.
      *
-     * @param Response         $response
-     * @param ServiceInterface $service
+     * @param  Response         $response
+     * @param  ServiceInterface $service
      * @return static
      */
     public static function fromResponse(Response $response, ServiceInterface $service)
@@ -198,22 +198,22 @@ class Container extends AbstractContainer
     /**
      * Creates a Collection of objects in the container
      *
-     * @param array $params associative array of parameter values.
-     *                      * account/tenant - The unique identifier of the account/tenant.
-     *                      * container- The unique identifier of the container.
-     *                      * limit (Optional) - The number limit of results.
-     *                      * marker (Optional) - Value of the marker, that the object names
-     *                      greater in value than are returned.
-     *                      * end_marker (Optional) - Value of the marker, that the object names
-     *                      less in value than are returned.
-     *                      * prefix (Optional) - Value of the prefix, which the returned object
-     *                      names begin with.
-     *                      * format (Optional) - Value of the serialized response format, either
-     *                      json or xml.
-     *                      * delimiter (Optional) - Value of the delimiter, that all the object
-     *                      names nested in the container are returned.
+     * @param  array                        $params associative array of parameter values.
+     *                                              * account/tenant - The unique identifier of the account/tenant.
+     *                                              * container- The unique identifier of the container.
+     *                                              * limit (Optional) - The number limit of results.
+     *                                              * marker (Optional) - Value of the marker, that the object names
+     *                                              greater in value than are returned.
+     *                                              * end_marker (Optional) - Value of the marker, that the object names
+     *                                              less in value than are returned.
+     *                                              * prefix (Optional) - Value of the prefix, which the returned object
+     *                                              names begin with.
+     *                                              * format (Optional) - Value of the serialized response format, either
+     *                                              json or xml.
+     *                                              * delimiter (Optional) - Value of the delimiter, that all the object
+     *                                              names nested in the container are returned.
      * @link   http://api.openstack.org for a list of possible parameter
-     *                      names and values
+     *                                              names and values
      * @return 'OpenCloud\Common\Collection
      * @throws ObjFetchError
      */
@@ -305,7 +305,7 @@ class Container extends AbstractContainer
     /**
      * Get either a fresh data object (no $info), or get an existing one by passing in data for population.
      *
-     * @param  mixed $info
+     * @param  mixed      $info
      * @return DataObject
      */
     public function dataObject($info = null)
@@ -329,8 +329,8 @@ class Container extends AbstractContainer
      *
      * These are also documented in RFC 2616.
      *
-     * @param string $name
-     * @param array  $headers
+     * @param  string     $name
+     * @param  array      $headers
      * @return DataObject
      */
     public function getObject($name, array $headers = array())
@@ -356,8 +356,8 @@ class Container extends AbstractContainer
      * This is useful for cases when the user does not want to fetch the full entity body of the
      * object, only its metadata.
      *
-     * @param       $name
-     * @param array $headers
+     * @param        $name
+     * @param  array $headers
      * @return $this
      */
     public function getPartialObject($name, array $headers = array())
@@ -376,7 +376,7 @@ class Container extends AbstractContainer
      * to save on bandwidth and time.
      *
      * @param  $name    Object name
-     * @return boolean  True, if object exists in this container; false otherwise.
+     * @return boolean True, if object exists in this container; false otherwise.
      */
     public function objectExists($name)
     {
@@ -400,9 +400,9 @@ class Container extends AbstractContainer
     /**
      * Upload a single file to the API.
      *
-     * @param       $name    Name that the file will be saved as in your container.
-     * @param       $data    Either a string or stream representation of the file contents to be uploaded.
-     * @param array $headers Optional headers that will be sent with the request (useful for object metadata).
+     * @param             $name    Name that the file will be saved as in your container.
+     * @param             $data    Either a string or stream representation of the file contents to be uploaded.
+     * @param  array      $headers Optional headers that will be sent with the request (useful for object metadata).
      * @return DataObject
      */
     public function uploadObject($name, $data, array $headers = array())

@@ -84,7 +84,7 @@ class ResourceIterator extends ArrayCollection implements Iterator
     }
 
     /**
-     * @param array $options
+     * @param  array $options
      * @return $this
      */
     public function setOptions(array $options)

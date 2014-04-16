@@ -73,7 +73,7 @@ class Volume extends PersistentResource
     /**
      * Rename either the `display_description` or the `display_name` properties
      *
-     * @param array $params
+     * @param  array                         $params
      * @return \Guzzle\Http\Message\Response
      * @throws \InvalidArgumentException
      */

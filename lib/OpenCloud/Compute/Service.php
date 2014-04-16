@@ -115,7 +115,7 @@ class Service extends NovaService
      * Returns a Network object
      *
      * @api
-     * @param string $id the network ID
+     * @param  string           $id the network ID
      * @return Resource\Network
      */
     public function network($id = null)
@@ -127,7 +127,7 @@ class Service extends NovaService
      * Returns a Collection of Network objects
      *
      * @api
-     * @param array $filter array of filter key/value pairs
+     * @param  array                        $filter array of filter key/value pairs
      * @return \OpenCloud\Common\Collection
      */
     public function networkList($filter = array())
@@ -142,7 +142,7 @@ class Service extends NovaService
      * creating an Image object directly.
      *
      * @api
-     * @param string $id - if supplied, returns the image with the specified ID.
+     * @param  string         $id - if supplied, returns the image with the specified ID.
      * @return Resource\Image object
      */
     public function image($id = null)
@@ -157,14 +157,14 @@ class Service extends NovaService
      * an ImageList object directly.
      *
      * @api
-     * @param boolean $details - if TRUE (the default), returns complete image
-     *                         details. Set to FALSE to improve performance, but only return a
-     *                         minimal set of data
-     * @param array   $filter  - key/value pairs to pass to the images resource.
-     *                         The actual values available here are determined by the OpenStack
-     *                         code and any extensions installed by your cloud provider;
-     *                         see http://docs.rackspace.com/servers/api/v2/cs-devguide/content/List_Images-d1e4435.html
-     *                         for current filters available.
+     * @param  boolean                      $details - if TRUE (the default), returns complete image
+     *                                               details. Set to FALSE to improve performance, but only return a
+     *                                               minimal set of data
+     * @param  array                        $filter  - key/value pairs to pass to the images resource.
+     *                                               The actual values available here are determined by the OpenStack
+     *                                               code and any extensions installed by your cloud provider;
+     *                                               see http://docs.rackspace.com/servers/api/v2/cs-devguide/content/List_Images-d1e4435.html
+     *                                               for current filters available.
      * @return \OpenCloud\Common\Collection
      */
     public function imageList($details = true, array $filter = array())

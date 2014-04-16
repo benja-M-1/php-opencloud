@@ -40,8 +40,8 @@ class ServerMetadata extends Metadata
     /**
      * Contructs a Metadata object associated with a Server or Image object
      *
-     * @param object $parent either a Server or an Image object
-     * @param string $key    the (optional) key for the metadata item
+     * @param  object        $parent either a Server or an Image object
+     * @param  string        $key    the (optional) key for the metadata item
      * @throws MetadataError
      */
     public function __construct(Server $parent, $key = null)
@@ -88,7 +88,7 @@ class ServerMetadata extends Metadata
      * Returns the URL of the metadata (key or block)
      *
      * @return string
-     * @param string $subresource not used; required for strict compatibility
+     * @param  string         $subresource not used; required for strict compatibility
      * @throws ServerUrlerror
      */
     public function getUrl($path = null, array $query = array())

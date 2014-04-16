@@ -144,8 +144,8 @@ abstract class CatalogService extends AbstractService
     /**
      * Returns the URL for the Service
      *
-     * @param  string $path  URL path segment
-     * @param  array  $query Array of query pairs
+     * @param  string          $path  URL path segment
+     * @param  array           $query Array of query pairs
      * @return Guzzle\Http\Url
      */
     public function getUrl($path = null, array $query = array())
@@ -225,8 +225,8 @@ abstract class CatalogService extends AbstractService
      * Given a subresource (e.g., "extensions"), this constructs the proper
      * URL and retrieves the resource.
      *
-     * @param string $resource The resource requested; should NOT have slashes
-     *                         at the beginning or end
+     * @param  string    $resource The resource requested; should NOT have slashes
+     *                             at the beginning or end
      * @return \stdClass object
      */
     private function getMetaUrl($resource)

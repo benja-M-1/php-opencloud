@@ -77,9 +77,9 @@ class Rackspace extends OpenStack
     /**
      * Creates a new Database service. Note: this is a Rackspace-only feature.
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                      $name    The name of the service as it appears in the Catalog
+     * @param  string                      $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                      $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\Database\Service
      */
     public function databaseService($name = null, $region = null, $urltype = null)
@@ -94,9 +94,9 @@ class Rackspace extends OpenStack
     /**
      * Creates a new Load Balancer service. Note: this is a Rackspace-only feature.
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                          $name    The name of the service as it appears in the Catalog
+     * @param  string                          $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                          $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\LoadBalancer\Service
      */
     public function loadBalancerService($name = null, $region = null, $urltype = null)
@@ -111,9 +111,9 @@ class Rackspace extends OpenStack
     /**
      * Creates a new DNS service. Note: this is a Rackspace-only feature.
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                $name    The name of the service as it appears in the Catalog
+     * @param  string                $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                $urltype The URL type ("publicURL" or "internalURL")
      * @return OpenCloud\DNS\Service
      */
     public function dnsService($name = null, $region = null, $urltype = null)
@@ -128,9 +128,9 @@ class Rackspace extends OpenStack
     /**
      * Creates a new CloudMonitoring service. Note: this is a Rackspace-only feature.
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                             $name    The name of the service as it appears in the Catalog
+     * @param  string                             $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                             $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\CloudMonitoring\Service
      */
     public function cloudMonitoringService($name = null, $region = null, $urltype = null)
@@ -145,9 +145,9 @@ class Rackspace extends OpenStack
     /**
      * Creates a new CloudQueues service. Note: this is a Rackspace-only feature.
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                       $name    The name of the service as it appears in the Catalog
+     * @param  string                       $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                       $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\Autoscale\Service
      */
     public function autoscaleService($name = null, $region = null, $urltype = null)
@@ -162,9 +162,9 @@ class Rackspace extends OpenStack
     /**
      * Creates a new CloudQueues service. Note: this is a Rackspace-only feature.
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                    $name    The name of the service as it appears in the Catalog
+     * @param  string                    $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                    $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\Queues\Service
      */
     public function queuesService($name = null, $region = null, $urltype = null)

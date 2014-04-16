@@ -28,7 +28,7 @@ class Service extends NovaService
     /**
      * Returns a Volume object
      *
-     * @param string $id the Volume ID
+     * @param  string          $id the Volume ID
      * @return Resource\Volume
      */
     public function volume($id = null)
@@ -39,8 +39,8 @@ class Service extends NovaService
     /**
      * Returns a Collection of Volume objects
      *
-     * @param boolean $details if TRUE, return all details
-     * @param array   $filter  array of filter key/value pairs
+     * @param  boolean                      $details if TRUE, return all details
+     * @param  array                        $filter  array of filter key/value pairs
      * @return \OpenCloud\Common\Collection
      */
     public function volumeList($details = true, $filter = array())
@@ -59,7 +59,7 @@ class Service extends NovaService
     /**
      * Returns a VolumeType object
      *
-     * @param string $id the VolumeType ID
+     * @param  string          $id the VolumeType ID
      * @return Resource\Volume
      */
     public function volumeType($id = null)
@@ -70,7 +70,7 @@ class Service extends NovaService
     /**
      * Returns a Collection of VolumeType objects
      *
-     * @param array $filter array of filter key/value pairs
+     * @param  array                        $filter array of filter key/value pairs
      * @return \OpenCloud\Common\Collection
      */
     public function volumeTypeList($filter = array())
@@ -81,7 +81,7 @@ class Service extends NovaService
     /**
      * Returns a Snapshot object associated with this volume
      *
-     * @param null $id
+     * @param  null              $id
      * @return Resource\Snapshot
      */
     public function snapshot($id = null)
@@ -92,7 +92,7 @@ class Service extends NovaService
     /**
      * Returns a Collection of Snapshot objects
      *
-     * @param array $filter array of filter key/value pairs
+     * @param  array                        $filter array of filter key/value pairs
      * @return \OpenCloud\Common\Collection
      */
     public function snapshotList($filter = array())

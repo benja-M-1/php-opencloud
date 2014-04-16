@@ -51,7 +51,7 @@ class Property extends AbstractSchemaItem
     protected $value;
 
     /**
-     * @param array $data
+     * @param  array    $data
      * @return Property
      */
     public static function factory(array $data = array())

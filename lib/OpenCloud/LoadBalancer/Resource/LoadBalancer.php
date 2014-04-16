@@ -232,7 +232,7 @@ class LoadBalancer extends PersistentResource implements HasPtrRecordsInterface
     /**
      * Creates currently added nodes by sending them to the API
      *
-     * @return array of {@see \Guzzle\Http\Message\Response} objects
+     * @return array                                          of {@see \Guzzle\Http\Message\Response} objects
      * @throws \OpenCloud\Common\Exceptions\MissingValueError
      */
     public function addNodes()
@@ -255,7 +255,7 @@ class LoadBalancer extends PersistentResource implements HasPtrRecordsInterface
     /**
      * Remove a node from this load-balancer
      *
-     * @param int $id id of the node
+     * @param  int                           $id id of the node
      * @return \Guzzle\Http\Message\Response
      */
     public function removeNode($nodeId)
@@ -268,9 +268,9 @@ class LoadBalancer extends PersistentResource implements HasPtrRecordsInterface
      * or 'SERVICENET' to indicate the public or internal networks, or you can
      * pass the `Id` of an existing IP address.
      *
-     * @param string  $id        either 'public' or 'servicenet' or an ID of an
-     *                           existing IP address
-     * @param integer $ipVersion either null, 4, or 6 (both, IPv4, or IPv6)
+     * @param  string  $id        either 'public' or 'servicenet' or an ID of an
+     *                            existing IP address
+     * @param  integer $ipVersion either null, 4, or 6 (both, IPv4, or IPv6)
      * @return void
      */
     public function addVirtualIp($type = IpType::PUBLIC_TYPE, $ipVersion = null)

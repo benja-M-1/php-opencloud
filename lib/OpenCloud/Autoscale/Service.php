@@ -43,7 +43,7 @@ class Service extends CatalogService
     /**
      * Convenience method for getting an autoscale group.
      *
-     * @param  mixed $info
+     * @param  mixed            $info
      * @return AbstractResource
      */
     public function group($info = null)

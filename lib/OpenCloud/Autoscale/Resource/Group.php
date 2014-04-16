@@ -188,7 +188,7 @@ class Group extends AbstractResource
     /**
      * Get a particular scaling policy for this autoscale group.
      *
-     * @param  object|int $id
+     * @param  object|int    $id
      * @return ScalingPolicy
      */
     public function getScalingPolicy($id = null)

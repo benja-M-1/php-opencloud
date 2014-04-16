@@ -75,7 +75,7 @@ class Account extends AbstractResource
      *
      * @link http://docs.rackspace.com/files/api/v1/cf-devguide/content/Set_Account_Metadata-d1a4460.html
      *
-     * @param null $secret The value to set the secret to. If left blank, a random hash is generated.
+     * @param  null  $secret The value to set the secret to. If left blank, a random hash is generated.
      * @return $this
      */
     public function setTempUrlSecret($secret = null)

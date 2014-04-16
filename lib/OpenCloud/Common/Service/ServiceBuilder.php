@@ -29,9 +29,9 @@ class ServiceBuilder
     /**
      * Simple factory method for creating services.
      *
-     * @param Client $client  The HTTP client object
-     * @param string $class   The class name of the service
-     * @param array  $options The options.
+     * @param  Client                                     $client  The HTTP client object
+     * @param  string                                     $class   The class name of the service
+     * @param  array                                      $options The options.
      * @return \OpenCloud\Common\Service\ServiceInterface
      * @throws ServiceException
      */

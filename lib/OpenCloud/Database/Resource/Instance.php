@@ -103,7 +103,7 @@ class Instance extends NovaResource
      * Resizes the volume associated with the database instance (disk space)
      *
      * @api
-     * @param integer $newvolumesize the size of the new volume, in gigabytes
+     * @param  integer                 $newvolumesize the size of the new volume, in gigabytes
      * @return \OpenCloud\HttpResponse
      */
     public function resizeVolume($newvolumesize)
@@ -115,7 +115,7 @@ class Instance extends NovaResource
      * Enables the root user for the instance
      *
      * @api
-     * @return User the root user, including name and password
+     * @return User          the root user, including name and password
      * @throws InstanceError if HTTP response is not Success
      */
     public function enableRootUser()
@@ -130,7 +130,7 @@ class Instance extends NovaResource
      * Returns TRUE if the root user is enabled
      *
      * @api
-     * @return boolean TRUE if the root user is enabled; FALSE otherwise
+     * @return boolean       TRUE if the root user is enabled; FALSE otherwise
      * @throws InstanceError if HTTP status is not Success
      */
     public function isRootEnabled()
@@ -144,7 +144,7 @@ class Instance extends NovaResource
     /**
      * Returns a new Database object
      *
-     * @param string $name the database name
+     * @param  string   $name the database name
      * @return Database
      */
     public function database($name = '')
@@ -155,8 +155,8 @@ class Instance extends NovaResource
     /**
      * Returns a new User object
      *
-     * @param string $name      the user name
-     * @param array  $databases a simple array of database names
+     * @param  string $name      the user name
+     * @param  array  $databases a simple array of database names
      * @return User
      */
     public function user($name = '', $databases = array())

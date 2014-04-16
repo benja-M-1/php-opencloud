@@ -46,7 +46,7 @@ class Service extends CatalogService
     /**
      * Returns a domain
      *
-     * @param mixed $info either the ID, an object, or array of parameters
+     * @param  mixed           $info either the ID, an object, or array of parameters
      * @return Resource\Domain
      */
     public function domain($info = null)
@@ -57,7 +57,7 @@ class Service extends CatalogService
     /**
      * Returns a collection of domains
      *
-     * @param array $filter key/value pairs to use as query strings
+     * @param  array                        $filter key/value pairs to use as query strings
      * @return \OpenCloud\Common\Collection
      */
     public function domainList($filter = array())
@@ -71,7 +71,7 @@ class Service extends CatalogService
     /**
      * returns a PtrRecord object for a server
      *
-     * @param mixed $info ID, array, or object containing record data
+     * @param  mixed           $info ID, array, or object containing record data
      * @return Resource\Record
      */
     public function ptrRecord($info = null)
@@ -82,8 +82,8 @@ class Service extends CatalogService
     /**
      * returns a Collection of PTR records for a given Server
      *
-     * @param \OpenCloud\Compute\Resource\Server $server the server for which to
-     *                                                   retrieve the PTR records
+     * @param  \OpenCloud\Compute\Resource\Server $server the server for which to
+     *                                                    retrieve the PTR records
      * @return \OpenCloud\Common\Collection
      */
     public function ptrRecordList(HasPtrRecordsInterface $parent)
@@ -104,10 +104,10 @@ class Service extends CatalogService
      * an `AsyncResponse` object. This object can then be used to poll
      * for the status or to retrieve the final data as needed.
      *
-     * @param string $url     the URL of the request
-     * @param string $method  the HTTP method to use
-     * @param array  $headers key/value pairs for headers to include
-     * @param string $body    the body of the request (for PUT and POST)
+     * @param  string                 $url     the URL of the request
+     * @param  string                 $method  the HTTP method to use
+     * @param  array                  $headers key/value pairs for headers to include
+     * @param  string                 $body    the body of the request (for PUT and POST)
      * @return Resource\AsyncResponse
      */
     public function asyncRequest($url, $method = 'GET', $headers = array(), $body = null)
@@ -125,7 +125,7 @@ class Service extends CatalogService
      * return an AsyncResponse, the domain object will not actually exist
      * until some point after the import has occurred.
      *
-     * @param string $data the BIND_9 formatted data to import
+     * @param  string                 $data the BIND_9 formatted data to import
      * @return Resource\AsyncResponse
      */
     public function import($data)

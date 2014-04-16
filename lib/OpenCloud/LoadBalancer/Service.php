@@ -32,7 +32,7 @@ class Service extends NovaService
     /**
      * Return a Load Balancer
      *
-     * @param string $id
+     * @param  string                                        $id
      * @return \OpenCloud\LoadBalancer\Resource\LoadBalancer
      */
     public function loadBalancer($id = null)
@@ -43,9 +43,9 @@ class Service extends NovaService
     /**
      * Return a paginated collection of load balancers
      *
-     * @param bool $detail If TRUE, all details are returned; otherwise, a
-     *                     minimal set (ID, name) is retrieved
-     * @param array $filter Optional query params used for search
+     * @param  bool                                           $detail If TRUE, all details are returned; otherwise, a
+     *                                                                minimal set (ID, name) is retrieved
+     * @param  array                                          $filter Optional query params used for search
      * @return \OpenCloud\Common\Collection\PaginatedIterator
      */
     public function loadBalancerList($detail = true, array $filter = array())
@@ -75,7 +75,7 @@ class Service extends NovaService
      * between a certain period.
      *
      * @link http://docs.rackspace.com/loadbalancers/api/v1.0/clb-devguide/content/List_Usage-d1e3014.html
-     * @param array $filter
+     * @param  array                                          $filter
      * @return \OpenCloud\Common\Collection\PaginatedIterator
      */
     public function billableLoadBalancerList(array $filter = array())
@@ -91,7 +91,7 @@ class Service extends NovaService
     /**
      * Returns an allowed domain
      *
-     * @param mixed $data either an array of values or null
+     * @param  mixed                                          $data either an array of values or null
      * @return \OpenCloud\LoadBalancer\Resource\AllowedDomain
      */
     public function allowedDomain($data = null)

@@ -75,7 +75,7 @@ class Domain extends AbstractResource
     /**
      * returns a Collection of Record objects
      *
-     * @param array $filter query-string parameters
+     * @param  array                 $filter query-string parameters
      * @return \OpenCloud\Collection
      */
     public function recordList($filter = array())
@@ -121,7 +121,7 @@ class Domain extends AbstractResource
      * Adds a new record to the list (for multiple record creation)
      *
      * @api
-     * @param Record $rec the record to add
+     * @param  Record  $rec the record to add
      * @return integer the number of records
      */
     public function addRecord(Record $record)
@@ -135,8 +135,8 @@ class Domain extends AbstractResource
      * adds a new subdomain (for multiple subdomain creation)
      *
      * @api
-     * @param Subdomain $subd the subdomain to add
-     * @return integer the number of subdomains
+     * @param  Subdomain $subd the subdomain to add
+     * @return integer   the number of subdomains
      */
     public function addSubdomain(Subdomain $subdomain)
     {
@@ -148,7 +148,7 @@ class Domain extends AbstractResource
     /**
      * returns changes since a specified date/time
      *
-     * @param string $since the date or time
+     * @param  string      $since the date or time
      * @return DNS\Changes
      */
     public function changes($since = null)
@@ -181,16 +181,16 @@ class Domain extends AbstractResource
     /**
      * clones the domain to the specified target domain
      *
-     * @param string  $newdomain the new domain to create from this domain
-     * @param boolean $sub       to clone subdomains as well
-     * @param boolean $comments  Replace occurrences of the reference domain
-     *                           name with the new domain name in comments
-     * @param boolean $email     Replace occurrences of the reference domain
-     *                           name with the new domain name in email addresses on the cloned
-     *                           (new) domain.
-     * @param boolean $records   Replace occurrences of the reference domain
-     *                           name with the new domain name in data fields (of records) on the
-     *                           cloned (new) domain. Does not affect NS records.
+     * @param  string        $newdomain the new domain to create from this domain
+     * @param  boolean       $sub       to clone subdomains as well
+     * @param  boolean       $comments  Replace occurrences of the reference domain
+     *                                  name with the new domain name in comments
+     * @param  boolean       $email     Replace occurrences of the reference domain
+     *                                  name with the new domain name in email addresses on the cloned
+     *                                  (new) domain.
+     * @param  boolean       $records   Replace occurrences of the reference domain
+     *                                  name with the new domain name in data fields (of records) on the
+     *                                  cloned (new) domain. Does not affect NS records.
      * @return AsyncResponse
      */
     public function cloneDomain(

@@ -47,7 +47,7 @@ class PtrRecord extends Record
     /**
      * Used to internally populate this object with the appropriate type checks
      *
-     * @param array $params
+     * @param  array                     $params
      * @throws \InvalidArgumentException If no parent device set
      */
     protected function populateRecord(array $params = array())

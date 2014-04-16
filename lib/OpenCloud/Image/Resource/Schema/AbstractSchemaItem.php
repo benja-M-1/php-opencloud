@@ -27,8 +27,8 @@ abstract class AbstractSchemaItem
     /**
      * Stock a schema property only if set
      *
-     * @param array $data
-     * @param       $property
+     * @param  array $data
+     * @param        $property
      * @return mixed
      */
     protected static function stockProperty(array $data, $property)

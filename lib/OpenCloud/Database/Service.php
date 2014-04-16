@@ -31,7 +31,7 @@ class Service extends NovaService
     /**
      * Returns an Instance
      *
-     * @param string $id the ID of the instance to retrieve
+     * @param  string                                $id the ID of the instance to retrieve
      * @return \OpenCloud\Database\Resource\Instance
      */
     public function instance($id = null)
@@ -42,7 +42,7 @@ class Service extends NovaService
     /**
      * Returns a Collection of Instance objects
      *
-     * @param array $params
+     * @param  array                                          $params
      * @return \OpenCloud\Common\Collection\PaginatedIterator
      */
     public function instanceList($params = array())

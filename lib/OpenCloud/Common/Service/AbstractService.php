@@ -135,8 +135,8 @@ abstract class AbstractService extends Base implements ServiceInterface
      * Factory method for instantiating resource objects.
      *
      * @param  string $resourceName
-     * @param  mixed  $info   (default: null)
-     * @param  mixed  $parent The parent object
+     * @param  mixed  $info         (default: null)
+     * @param  mixed  $parent       The parent object
      * @return object
      */
     public function resource($resourceName, $info = null, $parent = null)
@@ -157,9 +157,9 @@ abstract class AbstractService extends Base implements ServiceInterface
     /**
      * Factory method for instantiating a resource collection.
      *
-     * @param string      $resourceName
-     * @param string|null $url
-     * @param string|null $parent
+     * @param  string            $resourceName
+     * @param  string|null       $url
+     * @param  string|null       $parent
      * @return PaginatedIterator
      */
     public function resourceList($resourceName, $url = null, $parent = null)

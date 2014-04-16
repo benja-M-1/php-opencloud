@@ -75,7 +75,7 @@ abstract class AbstractResource extends PersistentResource
     /**
      * returns JSON based on $keys
      *
-     * @param array $keys list of items to include
+     * @param  array    $keys list of items to include
      * @return stdClass
      */
     private function getJson($keys)

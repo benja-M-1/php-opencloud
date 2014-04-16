@@ -81,8 +81,8 @@ class Logger extends AbstractLogger
     /**
      * Interpolates context values into the message placeholders.
      *
-     * @param string $message
-     * @param array  $context
+     * @param  string $message
+     * @param  array  $context
      * @return type
      */
     private function interpolate($message, array $context = array())
@@ -162,7 +162,7 @@ class Logger extends AbstractLogger
     /**
      * Get an individual option.
      *
-     * @param  string $key
+     * @param  string      $key
      * @return string|null
      */
     public function getOption($key)
@@ -213,8 +213,8 @@ class Logger extends AbstractLogger
     /**
      * Dispatch a log output message.
      *
-     * @param string $message
-     * @param array  $context
+     * @param  string           $message
+     * @param  array            $context
      * @throws LoggingException
      */
     private function dispatch($message, $context)

@@ -135,9 +135,9 @@ abstract class Base
     /**
      * Basic check to see whether property exists.
      *
-     * @param string $property   The property name being investigated.
-     * @param bool   $allowRetry If set to TRUE, the check will try to format the name in underscores because
-     *                           there are sometimes discrepancies between camelCaseNames and underscore_names.
+     * @param  string $property   The property name being investigated.
+     * @param  bool   $allowRetry If set to TRUE, the check will try to format the name in underscores because
+     *                            there are sometimes discrepancies between camelCaseNames and underscore_names.
      * @return bool
      */
     protected function propertyExists($property, $allowRetry = true)
@@ -157,8 +157,8 @@ abstract class Base
     /**
      * Convert a string to camelCase format.
      *
-     * @param       $string
-     * @param  bool $capitalise Optional flag which allows for word capitalization.
+     * @param        $string
+     * @param  bool  $capitalise Optional flag which allows for word capitalization.
      * @return mixed
      */
     public function toCamel($string, $capitalise = true)
@@ -204,7 +204,7 @@ abstract class Base
      *
      * This is to support extension namespaces in some services.
      *
-     * @param string $property the name of the attribute
+     * @param  string  $property the name of the attribute
      * @return boolean
      */
     private function checkAttributePrefix($property)
@@ -220,7 +220,7 @@ abstract class Base
     /**
      * Grab value out of the data array.
      *
-     * @param string $property
+     * @param  string $property
      * @return mixed
      */
     protected function getProperty($property)
@@ -241,7 +241,7 @@ abstract class Base
     /**
      * Sets the logger.
      *
-     * @param Log\LoggerInterface $logger
+     * @param  Log\LoggerInterface $logger
      * @return $this
      */
     public function setLogger(Log\LoggerInterface $logger)
@@ -276,8 +276,10 @@ abstract class Base
     /**
      * Populates the current object based on an unknown data type.
      *
-     * @param  mixed $info
-     * @param        bool
+     * @param  mixed                           $info       The data structure that is populating the object.
+     * @param  bool                            $setObjects If set to TRUE, then this method will try to populate associated resources as objects
+     *                                                     rather than anonymous data types. So, a Server being populated might stock a Network
+     *                                                     object instead of a stdClass object.
      * @throws Exceptions\InvalidArgumentError
      */
     public function populate($info, $setObjects = true)

@@ -49,7 +49,7 @@ abstract class ArrayCollection extends ArrayAccess implements Countable
     }
 
     /**
-     * @param array $data
+     * @param  array $data
      * @return $this
      */
     public function setElements(array $data = array())

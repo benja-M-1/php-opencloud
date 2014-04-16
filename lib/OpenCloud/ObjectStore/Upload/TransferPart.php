@@ -49,7 +49,7 @@ class TransferPart
     protected $path;
 
     /**
-     * @param int $contentLength
+     * @param  int   $contentLength
      * @return $this
      */
     public function setContentLength($contentLength)
@@ -87,7 +87,7 @@ class TransferPart
     }
 
     /**
-     * @param int $partNumber
+     * @param  int   $partNumber
      * @return $this
      */
     public function setPartNumber($partNumber)
@@ -127,10 +127,10 @@ class TransferPart
     /**
      * Create the request needed for this upload to the API.
      *
-     * @param EntityBody $part    The entity body being uploaded
-     * @param int        $number  Its number/position, needed for name
-     * @param OpenStack  $client  Client responsible for issuing requests
-     * @param array      $options Set by the Transfer object
+     * @param  EntityBody                    $part    The entity body being uploaded
+     * @param  int                           $number  Its number/position, needed for name
+     * @param  OpenStack                     $client  Client responsible for issuing requests
+     * @param  array                         $options Set by the Transfer object
      * @return OpenCloud\Common\Http\Request
      */
     public static function createRequest($part, $number, $client, $options)
@@ -163,8 +163,8 @@ class TransferPart
     /**
      * Construct a TransferPart from a HTTP response delivered by the API.
      *
-     * @param Response $response
-     * @param int      $partNumber
+     * @param  Response     $response
+     * @param  int          $partNumber
      * @return TransferPart
      */
     public static function fromResponse(Response $response, $partNumber = 1)

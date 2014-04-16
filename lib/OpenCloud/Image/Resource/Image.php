@@ -38,8 +38,8 @@ class Image extends AbstractSchemaResource implements ImageInterface
     /**
      * Update this resource
      *
-     * @param array  $params
-     * @param Schema $schema
+     * @param  array                         $params
+     * @param  Schema                        $schema
      * @return \Guzzle\Http\Message\Response
      * @throws \RuntimeException
      */
@@ -117,7 +117,7 @@ class Image extends AbstractSchemaResource implements ImageInterface
     /**
      * List the members of this image
      *
-     * @param array $params
+     * @param  array $params
      * @return mixed
      */
     public function listMembers(array $params = array())
@@ -173,13 +173,14 @@ class Image extends AbstractSchemaResource implements ImageInterface
     public function createMember($tenantId)
     {
         $json = json_encode(array('member' => $tenantId));
+
         return $this->getClient()->post($this->getUrl(), self::getJsonHeader(), $json)->send();
     }
 
     /**
      * Add a tag to this image
      *
-     * @param string $tag
+     * @param  string                        $tag
      * @return \Guzzle\Http\Message\Response
      */
     public function addTag($tag)

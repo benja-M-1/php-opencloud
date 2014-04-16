@@ -31,8 +31,8 @@ class Metadata extends Base implements \Countable
      * This setter overrides the base one, since the metadata key can be
      * anything
      *
-     * @param string $property
-     * @param string $value
+     * @param  string $property
+     * @param  string $value
      * @return void
      */
     public function __set($property, $value)
@@ -82,10 +82,10 @@ class Metadata extends Base implements \Countable
      * If $prefix is provided, then only array keys that match the prefix
      * are set as metadata values, and $prefix is stripped from the key name.
      *
-     * @param array  $values an array of key/value pairs to set
-     * @param string $prefix if provided, a prefix that is used to identify
-     *                       metadata values. For example, you can set values from headers
-     *                       for a Container by using $prefix='X-Container-Meta-'.
+     * @param  array  $values an array of key/value pairs to set
+     * @param  string $prefix if provided, a prefix that is used to identify
+     *                        metadata values. For example, you can set values from headers
+     *                        for a Container by using $prefix='X-Container-Meta-'.
      * @return void
      */
     public function setArray($values, $prefix = null)

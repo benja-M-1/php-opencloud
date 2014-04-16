@@ -28,7 +28,7 @@ abstract class NovaService extends CatalogService
     /**
      * Returns a flavor from the service
      *
-     * @param string|null $id
+     * @param  string|null $id
      * @return Flavor
      */
     public function flavor($id = null)
@@ -39,8 +39,8 @@ abstract class NovaService extends CatalogService
     /**
      * Returns a list of Flavor objects
      *
-     * @param boolean $details Returns full details or not.
-     * @param array   $filter  Array for creating queries
+     * @param  boolean    $details Returns full details or not.
+     * @param  array      $filter  Array for creating queries
      * @return Collection
      */
     public function flavorList($details = true, array $filter = array())

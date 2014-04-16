@@ -145,8 +145,8 @@ class Check extends AbstractResource
     /**
      * Fetch particular data points.
      *
-     * @param string $metricName
-     * @param array  $options
+     * @param  string                                               $metricName
+     * @param  array                                                $options
      * @return mixed
      * @throws \OpenCloud\CloudMonitoring\Exception\MetricException
      */

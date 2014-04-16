@@ -126,7 +126,7 @@ class DataObject extends AbstractResource
     /**
      * Takes a response and stocks common values from both the body and the headers.
      *
-     * @param Response $response
+     * @param  Response $response
      * @return $this
      */
     public function populateFromResponse(Response $response)
@@ -152,7 +152,7 @@ class DataObject extends AbstractResource
     }
 
     /**
-     * @param Container $container
+     * @param  Container $container
      * @return $this
      */
     public function setContainer(Container $container)
@@ -337,7 +337,7 @@ class DataObject extends AbstractResource
     }
 
     /**
-     * @param string $destination Path (`container/object') of new object
+     * @param  string                        $destination Path (`container/object') of new object
      * @return \Guzzle\Http\Message\Response
      */
     public function copy($destination)
@@ -397,7 +397,7 @@ class DataObject extends AbstractResource
     /**
      * Remove this object from the CDN.
      *
-     * @param null $email
+     * @param  null  $email
      * @return mixed
      */
     public function purge($email = null)
@@ -418,7 +418,7 @@ class DataObject extends AbstractResource
     }
 
     /**
-     * @param string $type
+     * @param  string   $type
      * @return bool|Url
      */
     public function getPublicUrl($type = UrlType::CDN)

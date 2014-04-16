@@ -176,9 +176,9 @@ class Collection extends Base
      *
      * and the `$url` should be the URL of the next page of results
      *
-     * @param callable $callback the name of the function (or array of
-     *                           object, function name)
-     * @param string   $url      the URL of the next page of results
+     * @param  callable $callback the name of the function (or array of
+     *                            object, function name)
+     * @param  string   $url      the URL of the next page of results
      * @return void
      */
     public function setNextPageCallback($callback, $url)
@@ -316,7 +316,7 @@ class Collection extends Base
      * multi-page data).
      *
      * @api
-     * @param string $keyname the name of the field to use as the sort key
+     * @param  string $keyname the name of the field to use as the sort key
      * @return void
      */
     public function sort($keyname = 'id')
@@ -352,10 +352,10 @@ class Collection extends Base
      * return an empty list.
      *
      * @api
-     * @param callable $testfunc a callback function that is passed each item
-     *                           in turn. Note that `Select()` performs an explicit test for
-     *                           `FALSE`, so functions like `strpos()` need to be cast into a
-     *                           boolean value (and not just return the integer).
+     * @param  callable    $testfunc a callback function that is passed each item
+     *                               in turn. Note that `Select()` performs an explicit test for
+     *                               `FALSE`, so functions like `strpos()` need to be cast into a
+     *                               boolean value (and not just return the integer).
      * @returns void
      * @throws DomainError if callback doesn't return a boolean value
      */

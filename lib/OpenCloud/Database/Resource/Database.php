@@ -82,7 +82,7 @@ class Database extends PersistentResource
      * Creates a new database
      *
      * @api
-     * @param array $params array of attributes to set prior to Create
+     * @param  array                   $params array of attributes to set prior to Create
      * @return \OpenCloud\HttpResponse
      */
     public function create($params = array())
@@ -104,7 +104,7 @@ class Database extends PersistentResource
     /**
      * Updates an existing database
      *
-     * @param array $params ignored
+     * @param  array               $params ignored
      * @throws DatabaseUpdateError always; updates are not permitted
      * @return void
      */

@@ -53,9 +53,9 @@ class Operation
     protected $value;
 
     /**
-     * @param Schema   $schema
-     * @param Property $property
-     * @param string $operationType
+     * @param  Schema    $schema
+     * @param  Property  $property
+     * @param  string    $operationType
      * @return Operation
      */
     public static function factory(Schema $schema, Property $property, $operationType)

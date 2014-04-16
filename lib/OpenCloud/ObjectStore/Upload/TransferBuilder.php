@@ -84,7 +84,7 @@ class TransferBuilder
     }
 
     /**
-     * @param Container $container
+     * @param  Container $container
      * @return $this
      */
     public function setContainer(Container $container)
@@ -95,7 +95,7 @@ class TransferBuilder
     }
 
     /**
-     * @param EntityBody $entityBody
+     * @param  EntityBody $entityBody
      * @return $this
      */
     public function setEntityBody(EntityBody $entityBody)

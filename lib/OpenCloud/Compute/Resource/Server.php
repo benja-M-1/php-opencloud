@@ -170,18 +170,18 @@ class Server extends NovaResource implements HasPtrRecordsInterface
     /**
      * Creates a new Server object and associates it with a Compute service
      *
-     * @param mixed $info
-     *      * If NULL, an empty Server object is created
-     *      * If an object, then a Server object is created from the data in the
-     *      object
-     *      * If a string, then it's treated as a Server ID and retrieved from the
-     *      service
-     *      The normal use case for SDK clients is to treat it as either NULL or an
-     *      ID. The object value parameter is a special case used to construct
-     *      a Server object from a ServerList element to avoid a secondary
-     *      call to the Service.
+     * @param  mixed          $info
+     *                              * If NULL, an empty Server object is created
+     *                              * If an object, then a Server object is created from the data in the
+     *                              object
+     *                              * If a string, then it's treated as a Server ID and retrieved from the
+     *                              service
+     *                              The normal use case for SDK clients is to treat it as either NULL or an
+     *                              ID. The object value parameter is a special case used to construct
+     *                              a Server object from a ServerList element to avoid a secondary
+     *                              call to the Service.
      * @throws ServerNotFound if a 404 is returned
-     * @throws UnknownError if another error status is reported
+     * @throws UnknownError   if another error status is reported
      */
     public function __construct(Service $service, $info = null)
     {
@@ -202,8 +202,8 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      * routed through a NAT device to be reached.
      *
      * @api
-     * @param integer $type the type of IP version (4 or 6) to return
-     * @return string IP address
+     * @param  integer $type the type of IP version (4 or 6) to return
+     * @return string  IP address
      */
     public function ip($type = null)
     {
@@ -270,7 +270,7 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      * the power plug and then turning it back on, with a possibility of data loss.
      *
      * @api
-     * @param  string $type A particular reboot State. See Constants\ServerState for string values.
+     * @param  string                        $type A particular reboot State. See Constants\ServerState for string values.
      * @return \Guzzle\Http\Message\Response
      */
     public function reboot($type = null)
@@ -288,9 +288,9 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      * Creates a new image from a server
      *
      * @api
-     * @param string $name     The name of the new image
-     * @param array  $metadata Optional metadata to be stored on the image
-     * @return boolean|Image New Image instance on success; FALSE on failure
+     * @param  string                $name     The name of the new image
+     * @param  array                 $metadata Optional metadata to be stored on the image
+     * @return boolean|Image         New Image instance on success; FALSE on failure
      * @throws Exceptions\ImageError
      */
     public function createImage($name, $metadata = array())
@@ -320,12 +320,12 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      * Schedule daily image backups
      *
      * @api
-     * @param mixed $retention - false (default) indicates you want to
-     *                         retrieve the image schedule. $retention <= 0 indicates you
-     *                         want to delete the current schedule. $retention > 0 indicates
-     *                         you want to schedule image backups and you would like to
-     *                         retain $retention backups.
-     * @return mixed an object or FALSE on error
+     * @param  mixed                               $retention - false (default) indicates you want to
+     *                                                        retrieve the image schedule. $retention <= 0 indicates you
+     *                                                        want to delete the current schedule. $retention > 0 indicates
+     *                                                        you want to schedule image backups and you would like to
+     *                                                        retain $retention backups.
+     * @return mixed                               an object or FALSE on error
      * @throws Exceptions\ServerImageScheduleError if an error is encountered
      */
     public function imageSchedule($retention = false)
@@ -418,9 +418,9 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      *
      * @api
      * @link http://docs.rackspace.com/servers/api/v2/cs-devguide/content/rescue_mode.html
-     * @return string the root password of the rescue server
+     * @return string                       the root password of the rescue server
      * @throws Exceptions\ServerActionError if the server has no ID (i.e., has not
-     *      been created yet)
+     *                                      been created yet)
      */
     public function rescue()
     {
@@ -447,7 +447,7 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      * @link http://docs.rackspace.com/servers/api/v2/cs-devguide/content/rescue_mode.html
      * @return HttpResponse
      * @throws Exceptions\ServerActionError if the server has no ID (i.e., has not
-     *      been created yet)
+     *                                      been created yet)
      */
     public function unrescue()
     {
@@ -470,8 +470,8 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      * with a server.
      *
      * @api
-     * @param string $key - the (optional) name of the metadata item to return
-     * @return ServerMetadata object
+     * @param  string                   $key - the (optional) name of the metadata item to return
+     * @return ServerMetadata           object
      * @throws Exceptions\MetadataError
      */
     public function metadata($key = null)
@@ -483,8 +483,8 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      * Returns the IP address block for the Server or for a specific network.
      *
      * @api
-     * @param string $network - if supplied, then only the IP(s) for the
-     *                        specified network are returned. Otherwise, all IPs are returned.
+     * @param  string                    $network - if supplied, then only the IP(s) for the
+     *                                            specified network are returned. Otherwise, all IPs are returned.
      * @return object
      * @throws Exceptions\ServerIpsError
      */
@@ -564,9 +564,9 @@ class Server extends NovaResource implements HasPtrRecordsInterface
      * Adds a "personality" file to be uploaded during create() or rebuild()
      *
      * @api
-     * @param string $path The path where the file will be stored on the
-     *                     target server (up to 255 characters)
-     * @param string $data the file contents (max size set by provider)
+     * @param  string $path The path where the file will be stored on the
+     *                      target server (up to 255 characters)
+     * @param  string $data the file contents (max size set by provider)
      * @return void
      */
     public function addFile($path, $data)

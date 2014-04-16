@@ -93,7 +93,7 @@ class Service extends CatalogService implements EventSubscriberInterface
     private $clientId;
 
     /**
-     * @param null $clientId
+     * @param  null  $clientId
      * @return $this
      */
     public function setClientId($clientId = null)

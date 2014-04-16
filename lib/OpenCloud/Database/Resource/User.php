@@ -52,10 +52,10 @@ class User extends PersistentResource
      * name via the `$info` parameter only creates an in-memory object that
      * is not necessarily tied to an actual database.
      *
-     * @param Instance $instance the parent DbService\Instance of the database
-     * @param mixed    $info     if an array or object, treated as properties to set;
-     *                           if a string, treated as the database name
-     * @param array    $db       a list of database names to associate with the User
+     * @param  Instance      $instance the parent DbService\Instance of the database
+     * @param  mixed         $info     if an array or object, treated as properties to set;
+     *                                 if a string, treated as the database name
+     * @param  array         $db       a list of database names to associate with the User
      * @return void
      * @throws UserNameError if `$info` is not a string, object, or array
      */
@@ -105,7 +105,7 @@ class User extends PersistentResource
      * Adds a new database to the list of databases for the user
      *
      * @api
-     * @param string $dbname the database name to be added
+     * @param  string $dbname the database name to be added
      * @return void
      */
     public function addDatabase($dbname)
@@ -126,7 +126,7 @@ class User extends PersistentResource
      *
      * @api
      * @return \OpenCloud\HttpResponse
-     * @throws UserDeleteError if HTTP response is not Success
+     * @throws UserDeleteError         if HTTP response is not Success
      */
     public function delete()
     {

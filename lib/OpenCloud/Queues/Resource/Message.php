@@ -119,13 +119,13 @@ class Message extends PersistentObject
     /**
      * This operation immediately deletes the specified message.
      *
-     * @param  string $claimId Specifies that the message should be deleted
-     *                         only if it has the specified claim ID, and that claim has not expired.
-     *                         This is useful for ensuring only one agent processes any given
-     *                         message. Whenever a worker client's claim expires before it has a
-     *                         chance to delete a message it has processed, the worker must roll
-     *                         back any actions it took based on that message because another worker
-     *                         will now be able to claim and process the same message.
+     * @param string $claimId Specifies that the message should be deleted
+     *                        only if it has the specified claim ID, and that claim has not expired.
+     *                        This is useful for ensuring only one agent processes any given
+     *                        message. Whenever a worker client's claim expires before it has a
+     *                        chance to delete a message it has processed, the worker must roll
+     *                        back any actions it took based on that message because another worker
+     *                        will now be able to claim and process the same message.
      *
      *      If you do *not* specify $claimId, but the message is claimed, the
      *      operation fails. You can only delete claimed messages by providing

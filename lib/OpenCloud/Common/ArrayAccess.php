@@ -29,7 +29,7 @@ class ArrayAccess implements \ArrayAccess
     /**
      * Checks to see whether a particular offset key exists.
      *
-     * @param mixed $offset
+     * @param  mixed $offset
      * @return bool
      */
     public function offsetExists($offset)
@@ -50,7 +50,7 @@ class ArrayAccess implements \ArrayAccess
     /**
      * Get the value for a particular offset key.
      *
-     * @param mixed $offset
+     * @param  mixed      $offset
      * @return mixed|null
      */
     public function offsetGet($offset)

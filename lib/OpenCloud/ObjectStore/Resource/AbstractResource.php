@@ -63,8 +63,8 @@ abstract class AbstractResource extends Base
     /**
      * Factory method that allows for easy instantiation from a Response object.
      *
-     * @param Response         $response
-     * @param ServiceInterface $service
+     * @param  Response         $response
+     * @param  ServiceInterface $service
      * @return static
      */
     public static function fromResponse(Response $response, ServiceInterface $service)
@@ -121,7 +121,7 @@ abstract class AbstractResource extends Base
     /**
      * Prepend/stock the header names with a resource-specific prefix.
      *
-     * @param array $headers
+     * @param  array $headers
      * @return array
      */
     public static function stockHeaders(array $headers)
@@ -138,8 +138,8 @@ abstract class AbstractResource extends Base
     /**
      * Set the metadata (local-only) for this object.
      *
-     * @param      $data
-     * @param bool $constructFromResponse
+     * @param        $data
+     * @param  bool  $constructFromResponse
      * @return $this
      */
     public function setMetadata($data, $constructFromResponse = false)
@@ -166,9 +166,9 @@ abstract class AbstractResource extends Base
     /**
      * Push local metadata to the API, thereby executing a permanent save.
      *
-     * @param array $metadata    The array of values you want to set as metadata
-     * @param bool  $stockPrefix Whether to prepend each array key with the metadata-specific prefix. For objects, this
-     *                           would be X-Object-Meta-Foo => Bar
+     * @param  array $metadata    The array of values you want to set as metadata
+     * @param  bool  $stockPrefix Whether to prepend each array key with the metadata-specific prefix. For objects, this
+     *                            would be X-Object-Meta-Foo => Bar
      * @return mixed
      */
     public function saveMetadata(array $metadata, $stockPrefix = true)
@@ -215,7 +215,7 @@ abstract class AbstractResource extends Base
     /**
      * Append a particular array of values to the existing metadata. Analogous to a merge.
      *
-     * @param array $values
+     * @param  array $values
      * @return array
      */
     public function appendToMetadata(array $values)

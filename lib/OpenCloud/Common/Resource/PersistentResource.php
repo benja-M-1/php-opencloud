@@ -31,7 +31,7 @@ abstract class PersistentResource extends BaseResource
     /**
      * Create a new resource
      *
-     * @param array $params
+     * @param  array                         $params
      * @return \Guzzle\Http\Message\Response
      */
     public function create($params = array())
@@ -64,7 +64,7 @@ abstract class PersistentResource extends BaseResource
     /**
      * Update a resource
      *
-     * @param array $params
+     * @param  array                         $params
      * @return \Guzzle\Http\Message\Response
      */
     public function update($params = array())
@@ -95,8 +95,8 @@ abstract class PersistentResource extends BaseResource
     /**
      * Refresh the state of a resource
      *
-     * @param null $id
-     * @param null $url
+     * @param  null                          $id
+     * @param  null                          $url
      * @return \Guzzle\Http\Message\Response
      * @throws IdRequiredError
      */
@@ -264,7 +264,7 @@ abstract class PersistentResource extends BaseResource
     /**
      * Check whether an extension is valid
      *
-     * @param mixed $alias The extension name
+     * @param  mixed                     $alias The extension name
      * @return bool
      * @throws UnsupportedExtensionError
      */

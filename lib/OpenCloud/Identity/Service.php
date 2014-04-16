@@ -161,9 +161,9 @@ class Service extends AbstractService
     /**
      * Generate a new token for a given user.
      *
-     * @param   $json    string The JSON data-structure used in the HTTP entity body when POSTing to the API
+     * @param                                $json string The JSON data-structure used in the HTTP entity body when POSTing to the API
      * @headers $headers array  Additional headers to send (optional)
-     * @return  \Guzzle\Http\Message\Response
+     * @return \Guzzle\Http\Message\Response
      */
     public function generateToken($json, array $headers = array())
     {

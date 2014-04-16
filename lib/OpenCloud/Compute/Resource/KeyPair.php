@@ -84,7 +84,7 @@ class KeyPair extends PersistentObject
     /**
      * Upload an existing public key to a new keypair.
      *
-     * @param  array $options
+     * @param  array            $options
      * @return type
      * @throws KeyPairException
      */

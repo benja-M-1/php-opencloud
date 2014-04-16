@@ -89,7 +89,7 @@ class OpenStack extends Client
     /**
      * Set the credentials for the client
      *
-     * @param array $secret
+     * @param  array $secret
      * @return $this
      */
     public function setSecret(array $secret = array())
@@ -263,7 +263,7 @@ class OpenStack extends Client
     }
 
     /**
-     * @param Common\Log\LoggerInterface $logger
+     * @param  Common\Log\LoggerInterface $logger
      * @return $this
      */
     public function setLogger(Common\Log\LoggerInterface $logger)
@@ -445,15 +445,15 @@ class OpenStack extends Client
     private function updateTokenHeader($token = null)
     {
         $token = $token ? : $this->getToken();
-        $this->setDefaultOption('headers/X-Auth-Token', (string)$token);
+        $this->setDefaultOption('headers/X-Auth-Token', (string) $token);
     }
 
     /**
      * Creates a new ObjectStore object (Swift/Cloud Files)
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                         $name    The name of the service as it appears in the Catalog
+     * @param  string                         $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                         $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\ObjectStore\Service
      */
     public function objectStoreService($name = null, $region = null, $urltype = null)
@@ -468,9 +468,9 @@ class OpenStack extends Client
     /**
      * Creates a new Compute object (Nova/Cloud Servers)
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                     $name    The name of the service as it appears in the Catalog
+     * @param  string                     $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                     $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\Compute\Service
      */
     public function computeService($name = null, $region = null, $urltype = null)
@@ -485,9 +485,9 @@ class OpenStack extends Client
     /**
      * Creates a new Orchestration (Heat) service object
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                           $name    The name of the service as it appears in the Catalog
+     * @param  string                           $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                           $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\Orchestration\Service
      * @codeCoverageIgnore
      */
@@ -503,9 +503,9 @@ class OpenStack extends Client
     /**
      * Creates a new Volume (Cinder) service object
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                    $name    The name of the service as it appears in the Catalog
+     * @param  string                    $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                    $urltype The URL type ("publicURL" or "internalURL")
      * @return \OpenCloud\Volume\Service
      */
     public function volumeService($name = null, $region = null, $urltype = null)
@@ -533,9 +533,9 @@ class OpenStack extends Client
     /**
      * Creates a new Glance service
      *
-     * @param string $name    The name of the service as it appears in the Catalog
-     * @param string $region  The region (DFW, IAD, ORD, LON, SYD)
-     * @param string $urltype The URL type ("publicURL" or "internalURL")
+     * @param  string                          $name    The name of the service as it appears in the Catalog
+     * @param  string                          $region  The region (DFW, IAD, ORD, LON, SYD)
+     * @param  string                          $urltype The URL type ("publicURL" or "internalURL")
      * @return Common\Service\ServiceInterface
      */
     public function imageService($name = null, $region = null, $urltype = null)

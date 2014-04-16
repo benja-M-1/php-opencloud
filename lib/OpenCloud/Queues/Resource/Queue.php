@@ -98,7 +98,7 @@ class Queue extends PersistentResource
     /**
      * Save this metadata both to the local object and the API.
      *
-     * @param array $params
+     * @param  array $params
      * @return mixed
      */
     public function saveMetadata(array $params = array())
@@ -168,9 +168,9 @@ class Queue extends PersistentResource
      * Gets a message either by a specific ID, or, if no ID is specified, just
      * an empty Message object.
      *
-     * @param string|null $id If a string, then the service will retrieve an
-     *                        individual message based on its specific ID. If NULL, then an empty
-     *                        object is returned for further use.
+     * @param  string|null $id If a string, then the service will retrieve an
+     *                         individual message based on its specific ID. If NULL, then an empty
+     *                         object is returned for further use.
      * @return Message
      */
     public function getMessage($id = null)
@@ -181,7 +181,7 @@ class Queue extends PersistentResource
     /**
      * Post an individual message.
      *
-     * @param array $params
+     * @param  array $params
      * @return bool
      */
     public function createMessage(array $params)
@@ -192,7 +192,7 @@ class Queue extends PersistentResource
     /**
      * Post multiple messages.
      *
-     * @param array $messages
+     * @param  array $messages
      * @return bool
      */
     public function createMessages(array $messages)
@@ -274,7 +274,7 @@ class Queue extends PersistentResource
      * This operation immediately deletes the specified messages, providing a
      * means for bulk deletes.
      *
-     * @param array $ids Two-dimensional array of IDs to be deleted
+     * @param  array   $ids Two-dimensional array of IDs to be deleted
      * @return boolean
      */
     public function deleteMessages(array $ids)
@@ -336,7 +336,7 @@ class Queue extends PersistentResource
      * If an ID is supplied, the API is queried for a persistent object; otherwise
      * an empty object is returned.
      *
-     * @param  int $id
+     * @param  int   $id
      * @return Claim
      */
     public function getClaim($id = null)

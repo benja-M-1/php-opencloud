@@ -33,7 +33,7 @@ abstract class AbstractService extends CatalogService
      * List all available containers. If called by a CDN service, it returns CDN-enabled; if called by a regular
      * service, normal containers are returned.
      *
-     * @param array $filter
+     * @param  array      $filter
      * @return Collection
      */
     public function listContainers(array $filter = array())

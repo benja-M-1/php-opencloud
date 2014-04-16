@@ -34,7 +34,7 @@ class Encoder
 
     /**
      * Encode the
-     * @param array $operations
+     * @param  array  $operations
      * @return string
      */
     public static function encode(array $operations)

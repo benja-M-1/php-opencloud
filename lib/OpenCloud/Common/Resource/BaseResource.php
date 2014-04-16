@@ -50,7 +50,7 @@ abstract class BaseResource extends Base
     }
 
     /**
-     * @param \OpenCloud\Common\Service\ServiceInterface $service
+     * @param  \OpenCloud\Common\Service\ServiceInterface $service
      * @return \OpenCloud\Common\PersistentObject
      */
     public function setService(ServiceInterface $service)
@@ -74,7 +74,7 @@ abstract class BaseResource extends Base
     }
 
     /**
-     * @param BaseResource $parent
+     * @param  BaseResource $parent
      * @return self
      */
     public function setParent(BaseResource $parent)
@@ -107,7 +107,7 @@ abstract class BaseResource extends Base
     }
 
     /**
-     * @param mixed $metadata
+     * @param  mixed $metadata
      * @return $this
      */
     public function setMetadata($data)
@@ -141,8 +141,8 @@ abstract class BaseResource extends Base
     /**
      * Get this resource's URL
      *
-     * @param null  $path   URI path to add on
-     * @param array $query  Query to add on
+     * @param  null  $path  URI path to add on
+     * @param  array $query Query to add on
      * @return mixed
      */
     public function getUrl($path = null, array $query = array())
@@ -178,7 +178,7 @@ abstract class BaseResource extends Base
     /**
      * Find a resource link based on a type
      *
-     * @param string $type
+     * @param  string $type
      * @return bool
      */
     public function findLink($type = 'self')
@@ -281,7 +281,7 @@ abstract class BaseResource extends Base
     /**
      * Parse a HTTP response for the required content
      *
-     * @param Response $response
+     * @param  Response $response
      * @return mixed
      */
     public function parseResponse(Response $response)

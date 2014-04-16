@@ -47,7 +47,7 @@ class Service extends CatalogService
     /**
      * This operation returns images you created, shared images that you accepted, and standard images.
      *
-     * @param array $params
+     * @param  array                                          $params
      * @return \OpenCloud\Common\Collection\PaginatedIterator
      */
     public function listImages(array $params = array())

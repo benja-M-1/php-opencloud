@@ -76,8 +76,8 @@ class Service extends AbstractService
     /**
      * Create a container for this service.
      *
-     * @param       $name     The name of the container
-     * @param array $metadata Additional (optional) metadata to associate with the container
+     * @param              $name     The name of the container
+     * @param  array       $metadata Additional (optional) metadata to associate with the container
      * @return bool|static
      */
     public function createContainer($name, array $metadata = array())
@@ -131,9 +131,9 @@ class Service extends AbstractService
      * will be ignored. You can create up to 1,000 new containers per extraction request. Also note that only regular
      * files will be uploaded. Empty directories, symlinks, and so on, will not be uploaded.
      *
-     * @param        $path        The path to the archive being extracted
-     * @param        $archive     The contents of the archive (either string or stream)
-     * @param string $archiveType The type of archive you're using {@see \OpenCloud\ObjectStore\Constants\UrlType}
+     * @param                                                    $path        The path to the archive being extracted
+     * @param                                                    $archive     The contents of the archive (either string or stream)
+     * @param  string                                            $archiveType The type of archive you're using {@see \OpenCloud\ObjectStore\Constants\UrlType}
      * @return \Guzzle\Http\Message\Response
      * @throws Exception\BulkOperationException
      * @throws \OpenCloud\Common\Exceptions\InvalidArgumentError
@@ -171,8 +171,8 @@ class Service extends AbstractService
     /**
      * This method will delete multiple objects or containers from their account with a single request.
      *
-     * @param array $paths  A two-dimensional array of paths:
-     *                      array('container_a/file_1', 'container_b/file_78', 'container_c/file_40582')
+     * @param  array                            $paths A two-dimensional array of paths:
+     *                                                 array('container_a/file_1', 'container_b/file_78', 'container_c/file_40582')
      * @return \Guzzle\Http\Message\Response
      * @throws Exception\BulkOperationException
      */
@@ -200,9 +200,9 @@ class Service extends AbstractService
     /**
      * Allows files to be transferred from one container to another.
      *
-     * @param Container $old Where you're moving files from
-     * @param Container $new Where you're moving files to
-     * @return array    Of PUT responses
+     * @param  Container $old Where you're moving files from
+     * @param  Container $new Where you're moving files to
+     * @return array     Of PUT responses
      */
     public function migrateContainer(Container $old, Container $new, array $options = array())
     {
